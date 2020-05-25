@@ -1,5 +1,7 @@
 require('dotenv').config();
 const convict = require('convict');
+const convict_format_with_validator = require('convict-format-with-validator')
+convict.addFormats(convict_format_with_validator)
 
 const config = convict({
     env: {
@@ -39,6 +41,14 @@ const config = convict({
         database_name: {
             format: String,
             default: "clinic4all"
+        },
+        client: {
+            format: String,
+            default: "pg"
+        },
+        charset: {
+            format: String,
+            default: "utf8"
         }
     }
 });
