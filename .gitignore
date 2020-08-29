@@ -105,3 +105,6 @@ dist
 
 # Configuration
 config/dev.json
+
+# IntelliJ
+.idea

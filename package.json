@@ -1,0 +1,48 @@
+{
+  "name": "clinic4all",
+  "version": "1.0.0",
+  "description": "A minimalist app to manage patient infos for a medical clinic.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "node-pg-migrate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WaelOsmaniDev/clinic4all.git",
+    "pretest": "eslint --ignore-path .gitignore ."
+  },
+  "keywords": [
+    "patient",
+    "medical",
+    "clinic"
+  ],
+  "author": "whaleo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WaelOsmaniDev/clinic4all/issues"
+  },
+  "homepage": "https://github.com/WaelOsmaniDev/clinic4all#readme",
+  "dependencies": {
+    "body-parser": "latest",
+    "bookshelf": "^1.1.1",
+    "config": "^3.3.1",
+    "convict": "^6.0.0",
+    "convict-format-with-validator": "^6.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "knex": "^0.20.14",
+    "node-pg-migrate": "^4.6.1",
+    "pg": "^8.0.2",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.6",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "nodemon": "^2.0.4"
+  }
+}
