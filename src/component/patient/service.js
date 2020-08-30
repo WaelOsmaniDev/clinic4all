@@ -8,4 +8,8 @@ const countPatients = () => {
     return patientRepo.countPatients();
 };
 
-module.exports = {getAllPatients, countPatients};
+const savePatient = (patient) => {
+    return patientRepo.savePatient(patient);
+}
+
+module.exports = {getAllPatients, countPatients, savePatient};
