@@ -1,14 +1,13 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const config = require('../config');
 const app = express();
 const port = config.get('port');
 const db = require('./component/patient/repository');
 const patientApi = require('./component/patient/api');
 
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(
-    bodyParser.urlencoded({
+    express.urlencoded({
         extended: true,
     })
 );

@@ -1,7 +1,7 @@
 const patientRepo = require('./repository');
 
-const getAllPatients = () => {
-    return patientRepo.getAllPatients();
+const getAllPatients = (response) => {
+    return patientRepo.getAllPatients(response);
 };
 
 const countPatients = () => {
